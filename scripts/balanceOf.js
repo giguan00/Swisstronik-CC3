@@ -22,7 +22,7 @@ const sendShieldedQuery = async (provider, destination, data) => {
 
 async function main() {
   // Address of the deployed contract
-  const replace_contractAddress = "00x..";//your contract created
+  const replace_contractAddress = "0x444F0F5AD075216833F8BfEfAbf7f4c9462f053B";//your contract created
 
   // Get the signer (your account)
   const [signer] = await hre.ethers.getSigners();
@@ -33,7 +33,7 @@ async function main() {
 
   // Send a shielded query to retrieve balance data from the contract
   const replace_functionName = "balanceOf";
-  const replace_functionArgs = ["0x"];//your minter address
+  const replace_functionArgs = ["0x1fDa15a7D17efbc3e8a11Fbaea63fb405cfB3C32"];//your minter address
   const responseMessage = await sendShieldedQuery(signer.provider, replace_contractAddress, contract.interface.encodeFunctionData(replace_functionName, replace_functionArgs));
 
   // Decode the Uint8Array response into a readable string
